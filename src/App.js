@@ -1,11 +1,8 @@
+import React from 'react';
 import Clock from './component/clock';
 
 function App() {
-    return (
-        <div>
-            <Clock locale="bn-BD" />
-        </div>
-    );
+    return <Clock locale="bn-BD" />;
 }
 
 export default App;
