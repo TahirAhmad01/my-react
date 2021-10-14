@@ -1,12 +1,9 @@
 import React from 'react';
-import Form from './component/form';
+import ButtonCounter from './component/clickCounter';
+import './component/css/style.css';
 
 function App() {
-    return(
-        <div>
-            <Form />
-        </div>
-    )
+    return <ButtonCounter />;
 }
 
 export default App;
