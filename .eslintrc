@@ -17,6 +17,8 @@
     "jest": true
   },
   "rules": {
+    "react/button-has-type": 0,
+    "jsx-a11y/mouse-events-have-key-events": 0,
     "prefer-stateless-functionprefer-stateless-function": 0,
     "react/react-in-jsx-scope": 0,
     "prefer-stateless-function": 0,
