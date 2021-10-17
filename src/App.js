@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonCounter from './component/clickCounter';
 import './component/css/style.css';
+import Focus from './component/focus';
 import Counter from './component/Hoc/counter';
 import HoverCounter from './component/hoverCounter';
 
@@ -21,9 +22,7 @@ function App() {
                 )}
             </Counter>
             <Counter>
-                {(onFocus, numIncrement) => (
-                    <HoverCounter count={onFocus} numIncrement={numIncrement} />
-                )}
+                {(onFocus, numIncrement) => <Focus count={onFocus} numIncrement={numIncrement} />}
             </Counter>
         </div>
     );
