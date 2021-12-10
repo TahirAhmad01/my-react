@@ -1,20 +1,13 @@
 import React from 'react';
-import ButtonCounter from './component/clickCounter';
 import './component/css/style.css';
-import Counter from './component/Hoc/counter';
-import Section from './component/Hoc/section';
+import Todo from './component/todo';
 
-function App() {
-    return (
-        <div className="app">
-            <Counter>
-                {(count, numIncrement) => (
-                    <ButtonCounter count={count} numIncrement={numIncrement} />
-                )}
-            </Counter>
-            <Section />
-        </div>
-    );
+export default class App extends React.Component {
+    render() {
+        return (
+            <div className="app">
+                <Todo />
+            </div>
+        );
+    }
 }
-
-export default App;

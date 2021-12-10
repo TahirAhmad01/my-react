@@ -17,6 +17,9 @@
     "jest": true
   },
   "rules": {
+    "no-unused-expressions": 0,
+    "react/prefer-stateless-function": 0,
+    "react/require-render-return": 0,
     "react/button-has-type": 0,
     "jsx-a11y/mouse-events-have-key-events": 0,
     "prefer-stateless-functionprefer-stateless-function": 0,
