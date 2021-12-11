@@ -1,34 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-function Todo() {
+function Counter() {
     const [count, setCount] = useState(0);
-    const [date, setDate] = useState(new Date());
 
-    const tisk = () => {
-        setDate(new Date());
-    };
-
-    useEffect(() => {
-        console.log('effect rendering');
-        document.title = `clicked ${count} times`;
-    }, [count]);
-
-    useEffect(() => {
-        setInterval(tisk, 1000);
-    });
-
-    const addClick = () => {
-        setCount((prevCount) => prevCount + 1);
+    let i = 0;
+    const addFive = () => {
+        while (i < 5) {
+            setCount((prevState) => prevState + 1);
+            i += 1;
+        }
     };
 
     return (
         <div>
-            <h1>Time: {date.toLocaleTimeString()}</h1>
-            <button type="button" onClick={addClick}>
-                click me
-            </button>
+            {count}
+            <p>
+                <button type="button" onClick={() => setCount((prevState) => prevState + 1)}>
+                    Add 1
+                </button>
+            </p>
+            <p>
+                <button type="button" onClick={addFive}>
+                    Add 5
+                </button>
+            </p>
         </div>
     );
 }
 
-export default Todo;
+export default Counter;
